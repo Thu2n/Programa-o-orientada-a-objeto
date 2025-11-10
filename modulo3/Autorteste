@@ -1,0 +1,29 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AutorTest {
+
+    Autor autor = new Autor("Alan Turing", "Inglês");
+
+    @Test
+    public void testGetNome() {
+        assertEquals("Alan Turing", autor.getNome());
+    }
+
+    @Test
+    public void testGetNacionalidade() {
+        assertEquals("Inglês", autor.getNacionalidade());
+    }
+
+    @Test
+    public void testSetNome() {
+        autor.setNome("Grace Hopper");
+        assertEquals("Grace Hopper", autor.getNome());
+    }
+
+    @Test
+    public void testSetNacionalidade() {
+        autor.setNacionalidade("Americana");
+        assertEquals("Americana", autor.getNacionalidade());
+    }
+}
