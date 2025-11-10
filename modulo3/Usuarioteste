@@ -1,0 +1,29 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class UsuarioTest {
+
+    Usuario usuario = new Usuario("Gabriel", 21);
+
+    @Test
+    public void testGetNome() {
+        assertEquals("Gabriel", usuario.getNome());
+    }
+
+    @Test
+    public void testGetIdade() {
+        assertEquals(21, usuario.getIdade());
+    }
+
+    @Test
+    public void testSetNome() {
+        usuario.setNome("Lucas");
+        assertEquals("Lucas", usuario.getNome());
+    }
+
+    @Test
+    public void testSetIdade() {
+        usuario.setIdade(30);
+        assertEquals(30, usuario.getIdade());
+    }
+}
